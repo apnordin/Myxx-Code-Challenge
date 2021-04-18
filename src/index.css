@@ -39,6 +39,18 @@ body,
   height: 44px;
 }
 
+.btn-round:hover {
+  color: black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0 0 0 0rem rgba(39, 192, 106, 0);
+}
+
+.btn-round:focus {
+  color: black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.3);
+}
+
 .title-text {
   color: white;
   font-size: 75px;
@@ -100,4 +112,62 @@ body,
 .btn-vehicle:active {
   cursor: pointer;
   transform: scale(1.25);
+}
+
+.modaltext {
+  font-size: 18px;
+}
+
+.modal-close {
+  color: white;
+  border-radius: 5px;
+  font-size: 26px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  min-width: 35px;
+  height: 35px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.modal-close:hover {
+  cursor: pointer;
+  font-size: 26px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.rocket-status {
+  font-weight: 700;
+  text-align: center;
+  border-radius: 30px;
+  padding: 10px;
+  max-width: 200px;
+}
+
+.inactive {
+  color: rgb(201, 82, 78);
+  border: 3px solid rgb(201, 82, 78);
+}
+
+.active {
+  color: rgb(32, 158, 106);
+  border: 3px solid rgb(32, 158, 106);
+}
+
+.engine-list {
+  font-weight: 600;
+}
+
+.engine-sublist {
+  font-weight: 400;
+}
+
+.modalimage {
+  max-height: 725px;
+}
+
+.rocket-description {
+  line-height: 29px;
 }
