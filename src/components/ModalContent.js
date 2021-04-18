@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function ModalContent ( {rocketImage, rocketName, rocketStatus, rocketDesc, engineStages, engineType, engineThrust}) {
 

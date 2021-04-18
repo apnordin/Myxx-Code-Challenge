@@ -106,12 +106,12 @@ body,
 
 .btn-vehicle:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.175);
 }
 
 .btn-vehicle:active {
   cursor: pointer;
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 
 .modaltext {
