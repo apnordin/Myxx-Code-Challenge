@@ -1,0 +1,103 @@
+html,
+body,
+#root,
+.wrapper {
+  color: white;
+  height: 100%;
+}
+
+.background-web {
+  background-image: url("./assets/background_web.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.allpage {
+  height: 100%;
+  max-width: 100%;
+}
+
+.navbar {
+  padding: 40px 140px 35px;
+}
+
+.spacexlogo {
+  max-height: 44px;
+}
+
+.btn-round {
+  color: black;
+  border-radius: 30px;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: white;
+  width: 152px;
+  height: 44px;
+}
+
+.title-text {
+  color: white;
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.linebreak {
+  height: 5px;
+  width: 290px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: rgb(177, 197, 250);
+}
+
+.subtitle {
+  margin-top: -10px;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 20px 220px 0px;
+}
+
+.vehicle {
+  height: 500px;
+}
+
+.falcon1-image {
+  max-width: 10%;
+}
+
+.falcon9-image {
+  max-width: 20%;
+}
+
+.falconheavy-image {
+  max-width: 22%;
+}
+
+.starship-image {
+  max-width: 38%;
+}
+
+.btn-vehicle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.btn-vehicle:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn-vehicle:active {
+  cursor: pointer;
+  transform: scale(1.25);
+}
