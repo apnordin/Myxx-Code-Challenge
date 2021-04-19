@@ -1,53 +1,39 @@
-
-
-
 # Myxx Code Challenge
+
+This application was deployed using Heroku and can be found [here](https://myxx-code-challenge.herokuapp.com/).
 
 ## The Goal
 
-Your goal is to deliver a single-page web application based on the designer mockups below that utilizes the SpaceX API to showcase details regarding the following 4 SpaceX rockets: 
+My goal was to deliver a single-page web application based designer mockups that utilize the SpaceX API to showcase details regarding the following 4 SpaceX rockets:
 
-* *Falcon 1*
-* *Falcon 9*
-* *Falcon Heavy*
-* *Starship*
+- _Falcon 1_
+- _Falcon 9_
+- _Falcon Heavy_
+- _Starship_
 
 ![](https://user-images.githubusercontent.com/3980464/114952973-662aed80-9e25-11eb-8fd9-f5a120813e5e.png)
 
-**Notes**: When the user clicks on a rocket, a modal will appear with the details about that respective rocket. To close the modal, the user will press the `x` in the top left hand corner. 
+**Notes**: When the user clicks on a rocket, a full-screen modal will appear with the details about that respective rocket. To close the modal, the user will press the `x` in the top left hand corner.
 
-## Resources
+## Resources and Information
 
-You will find all asset files in the `public` folder in the repository
+The resources used to create this web application were pre-loaded, and the SpaceX API which was used can be found [here](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md).
 
-The documentation for the SpaceX API is located [here](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md)
+One of the great things about this API is that it only requires an API Key for destructive routes (i.e. `create`, `update`, and `delete` routes), whereas this web app only uses a 'get' route in order to access the info. Typically I would use dotenv to hide my API key, but since no API key is required, there is no risk from a security standpoint.
 
-## Completing the Challenge
+## Personal Notes
 
-This exercise should take a couple of hours.
+API calls are made using [Axios](https://github.com/axios/axios). Because there are only a limited number of SpaceX rockets, I considered performing a `get` on rendering which would pull information for all the rockets. However, in order to keep the app more agile in case of changes or additions to the SpaceX API, I decided to perform this action upon clicking on any of the rockets on the main page. This way there are no API calls while the page is trying to load, and it only gets the information for one specific rocket (using that rocket's ID) when opening the modal.
 
-To complete this challenge, please either submit a PR to this repository with your code, or provide a link to a repository where we can view the code. If you have published the code to Heroku or another hosting service, please provide that link as well. 
+The most time-consuming part of this project was working on the front-end. In the past, I've typically made use of a more minimalist design while focusing on the back-end functionality. In my most recent side-project ([Dark Patterns- deployed but still under construction](https://dark-patterns-324.herokuapp.com/)), I've had the opportunity to focus more on the front-end, but focusing more on the flow and patterns that appear during a step-oriented process. As such, this project was a great opportunity to focus on a more holistic approach to web app presentation, such as creating divs whose child elements align from the bottom up (rather than either top-down or cluttering up at the bottom at the same line-level) and using basic, appealing animations for hover effects.
 
-## Extra Credit
-These are not mandatory, but if you want to spend additional time on the exercise, we would love to see the following:
+Due to time constraints and familiarity, I used React-Bootstrap rather than Material-UI. This project was made using React, and due to the limited scope there are very few individual components (4 components and a main page). Modal effects were made using [React-Modal](https://www.npmjs.com/package/react-modal).
 
-* CSS animations
-* Testing
-* Documentation
-* Published (*Heroku, DigitalOcean, etc.*)
-* Mobile responsiveness
-  *  *The rockets should be displayed one at a time as a carousel. The user can tap the left and right carrot icons in the carousel to toggle back and forth between rockets*
-  *  View the mockups for the mobile site  [here](https://user-images.githubusercontent.com/3980464/114960324-cbd2a600-9e34-11eb-9481-7d9b54b7d847.png) (*carousel*) and [here](https://user-images.githubusercontent.com/3980464/114960356-d9882b80-9e34-11eb-88da-7b5921291521.png) (*modal*)
+As I mentioned, I built this app in such a way that I believe would make it easy to either add new rockets, remove rockets, change the data that appears in the modal, or make small changes to my code in case the SpaceX API changed their schema. This is one of the potential pitfalls of using a 3rd-party API, but by making API calls only upon selecting a rocket, I believe I've made these changes easier to manage.
 
-
-##  Things to Consider
-* *How would you instrument the application to track page performance? Errors?*
-* *Is there anything to worry about in regards to security?*
-* *What are the pitfalls of using a 3rd party API?*
+So far I am submitting the MVP, but the next steps are to work on documentation, mobile responsiveness, and testing.
 
 ## Getting Started
-
-This project uses the `create-react-app` tool to scaffold a [React](https://reactjs.org/) application with [Material UI](https://material-ui.com/).  If you wish to use another front-end framework, please feel free.
 
 ### `npm start`
 
@@ -60,15 +46,11 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-If you wish to write unit tests, this will launch the test runner in the interactive watch mode.
+I have not yet written unit tests, but this will launch the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

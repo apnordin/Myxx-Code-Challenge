@@ -30,9 +30,7 @@ export default function PrimaryContent() {
     }
 
     const openModal = (id, imgsource) => {
-        console.log('Clicked! id: ', id, imgsource);
         const queryURL = "https://api.spacexdata.com/v4/rockets/" + id;
-        console.log(queryURL);
         axios({
             method: 'get',
             url: queryURL
