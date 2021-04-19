@@ -42,11 +42,6 @@ So far I am submitting the MVP, but the next steps are to work on documentation,
 
 Runs the app in the development mode.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
 ### `npm test`
 
 I have not yet written unit tests, but this will launch the test runner in the interactive watch mode.
