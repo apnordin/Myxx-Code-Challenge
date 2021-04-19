@@ -13,13 +13,16 @@ My goal was to deliver a single-page web application based designer mockups that
 
 ![](https://user-images.githubusercontent.com/3980464/114952973-662aed80-9e25-11eb-8fd9-f5a120813e5e.png)
 
-**Notes**: When the user clicks on a rocket, a full-screen modal will appear with the details about that respective rocket. To close the modal, the user will press the `x` in the top left hand corner.
+**Notes**: When the user clicks on a rocket, a full-screen modal appears with the details about that respective rocket. To close the modal, the user will press the `x` in the top left hand corner.
 
 ## Resources and Information
 
 The resources used to create this web application were pre-loaded, and the SpaceX API which was used can be found [here](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/README.md).
 
 One of the great things about this API is that it only requires an API Key for destructive routes (i.e. `create`, `update`, and `delete` routes), whereas this web app only uses a 'get' route in order to access the info. Typically I would use dotenv to hide my API key, but since no API key is required, there is no risk from a security standpoint.
+
+A screenshot of my application can be seen here:
+![](https://raw.github.com/apnordin/Myxx-Code-Challenge/master/public/screenshots.png)
 
 ## Personal Notes
 
