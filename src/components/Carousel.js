@@ -127,7 +127,7 @@ export default function Carousel() {
         <div className="col-12 text-center">
             <h1 className="title-text">Vehicles</h1>
             <div className="linebreak"></div>
-            <p className="subtitle">Rockets that are shown below were created by SpaceX. Proportions between rockets are somewhat accurate. Click on a rocket to learn more.</p>
+            <p className="subtitle">Rockets shown below were created by SpaceX. Proportions between rockets are somewhat accurate. Click on a rocket to learn more.</p>
                 <Slider />          
             
             <Modal isOpen={modalIsOpen} style={customStyles} onRequestClose={() => setModalIsOpen(false)}>

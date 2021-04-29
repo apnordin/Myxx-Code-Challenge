@@ -72,7 +72,7 @@ export default function PrimaryContent() {
         <div className="col-12 text-center">
             <h1 className="title-text">Vehicles</h1>
             <div className="linebreak"></div>
-            <p className="subtitle">Rockets that are shown below were created by SpaceX. Proportions between rockets are somewhat accurate. Click on a rocket to learn more.</p>
+            <p className="subtitle">Rockets shown below were created by SpaceX. Proportions between rockets are somewhat accurate. Click on a rocket to learn more.</p>
             <div className="row">
                 <div className="col-3 vehicle">
                     <div className="btn-vehicle" onClick={() => openModal("5e9d0d95eda69955f709d1eb", falcon1)}>
