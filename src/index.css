@@ -255,8 +255,62 @@ body,
     display: inline-block;
     background-color: rgb(177, 197, 250);
   }
+  .btn-vehicle {
+    width: 80%;
+  }
 }
 
 .slider {
-  overflow: hidden;
+  height: 92%;
+  max-height: 488px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.falcon1-image-c {
+  max-width: 15%;
+}
+
+.falcon9-image-c {
+  max-width: 30%;
+}
+
+.falconheavy-image-c {
+  max-width: 33%;
+}
+
+.starship-image-c {
+  max-width: 57%;
+}
+
+.prevBtn {
+  position: relative;
+  float: left;
+  margin-left: -4.7%;
+  width: 35px;
+  height: 100%;
+}
+
+.nextBtn {
+  position: relative;
+  float: right;
+  margin-right: -4.7%;
+  width: 35px;
+  height: 100%;
+}
+
+.slider-btn-text {
+  line-height: 488px;
+}
+
+.slider-btn {
+  background-color: rgba(255, 255, 255, 0.212);
+}
+
+.slider-btn:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.vehiclesmall {
+  height: 345px;
 }

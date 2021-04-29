@@ -20,7 +20,7 @@ export default function Carousel() {
     const [engineType, setEngineType] = useState();
     const [engineThrust, setEngineThrust] = useState();
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentRocketIndex, setCurrentRocketIndex] = useState(0);
 
     
     const setModalIsOpenToTrue = () => {
@@ -70,85 +70,70 @@ export default function Carousel() {
         }
     }
 
-    // const ImageSlide = ( { url }) => {
-    //     const styles = {
-    //         backgroundImage: `url(${url})`,
-    //         backgroundSize: 'cover',
-    //         backgroundPosition: 'center'
-    //     };
-        
-    //     return (
-    //         <div className="image-slide" style={styles}></div>
-    //     )
-    // }
+    const nextBtn = (current) => {
+        if (current < 3) {
+            setCurrentRocketIndex(current + 1)
+            console.log(current)
+        } else if (current === 3) {
+            setCurrentRocketIndex(0)
+        }
 
-    // const Arrow = ({ direction, clickFunction, glyph }) => (
-    //     <div
-    //       className={ `slide-arrow ${direction}` }
-    //       onClick={ clickFunction }>
-    //     </div>
-    //   );
+    }
+
+    const prevBtn = (current) => {
+        if (current > 0) {
+            setCurrentRocketIndex(current - 1)
+        } else if (current === 0) {
+            setCurrentRocketIndex(3)
+        }
+    }
 
     const carouselItems = [
-        { name: "Falcon 1", shortname: "falcon1", imgclass: "falcon1-image", imgURL: {falcon1}, idKey: "5e9d0d95eda69955f709d1eb" },
-        { name: "Falcon 9", shortname: "falcon9", imgclass: "falcon9-image", imgURL: {falcon9}, idKey: "5e9d0d95eda69973a809d1ec" },
-        { name: "Falcon Heavy", shortname: "falconheavy", imgclass: "falconheavy-image", imgURL: {falconheavy}, idKey: "5e9d0d95eda69974db09d1ed" },
-        { name: "Starship", shortname: "starship", imgclass: "starship-image", imgURL: {starship}, idKey: "5e9d0d96eda699382d09d1ee" },
+        { name: "Falcon 1", shortname: "falcon1", imgclass: "falcon1-image-c", imgURL: {falcon1}, idKey: "5e9d0d95eda69955f709d1eb" },
+        { name: "Falcon 9", shortname: "falcon9", imgclass: "falcon9-image-c", imgURL: {falcon9}, idKey: "5e9d0d95eda69973a809d1ec" },
+        { name: "Falcon Heavy", shortname: "falconheavy", imgclass: "falconheavy-image-c", imgURL: {falconheavy}, idKey: "5e9d0d95eda69974db09d1ed" },
+        { name: "Starship", shortname: "starship", imgclass: "starship-image-c", imgURL: {starship}, idKey: "5e9d0d96eda699382d09d1ee" },
     ]
 
     const Slider = () => {
-        
+
+        console.log(carouselItems[currentRocketIndex]);
+
+        const item = carouselItems[currentRocketIndex];
+        const shortName = carouselItems[currentRocketIndex].shortname;
+        const imageURL = carouselItems[currentRocketIndex].imgURL[shortName]
+
         return (
-            <div>
-                 { carouselItems.map(function(carouselItem) {
-                    const shortName = carouselItem.shortname;
-                    const imageURL = carouselItem.imgURL[shortName];
-                     return (
-                         <div className="col-3 vehicle" key={carouselItem.shortname}>
-                            <div className="btn-vehicle" onClick={() => openModal(carouselItem.idKey, imageURL)}>
-                                <h3>{carouselItem.name}</h3>
-                                <img className={carouselItem.imgclass} alt={carouselItem.imgURL[shortName]} src={carouselItem.imgURL[shortName]}></img>
-                            </div>
-                         </div>
-                     )
-                 })}
+            <div className="slider">
+                <div className="col-12">
+
+                    <div className="prevBtn slider-btn" onClick={() => prevBtn(currentRocketIndex)}>
+                        <div className="slider-btn-text">
+                            Prev
+                        </div>
+                    </div>
+                    <div className="nextBtn slider-btn" onClick={() => nextBtn(currentRocketIndex)}>
+                        <div className="slider-btn-text">
+                            Next
+                        </div>
+                    </div>
+                    <div className="vehicle" key={item.shortname}>
+                        <div className="btn-vehicle" onClick={() => openModal(item.idKey, imageURL)}>
+                            <h3>{item.name}</h3>
+                            <img className={item.imgclass} alt={imageURL} src={imageURL}></img>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
-
-  
 
     return(
         <div className="col-12 text-center">
             <h1 className="title-text">Vehicles</h1>
             <div className="linebreak"></div>
             <p className="subtitle">Rockets that are shown below were created by SpaceX. Proportions between rockets are somewhat accurate. Click on a rocket to learn more.</p>
-                <Slider />
-                {/* <div className="col-3 vehicle">
-                    <div className="btn-vehicle" onClick={() => openModal("5e9d0d95eda69955f709d1eb", falcon1)}>
-                        <h3>Falcon 1</h3>
-                        <img className="falcon1-image" alt="falcon1" src={falcon1}></img>
-                    </div>
-                </div>
-                <div className="col-3 vehicle">
-                    <div className="btn-vehicle" onClick={() => openModal("5e9d0d95eda69973a809d1ec", falcon9)}>
-                        <h3>Falcon 9</h3>
-                        <img className="falcon9-image" alt="falcon1" src={falcon9}></img>
-                    </div>
-                </div>
-                <div className="col-3 vehicle">
-                    <div className="btn-vehicle" onClick={() => openModal("5e9d0d95eda69974db09d1ed", falconheavy)}>
-                        <h3>Falcon Heavy</h3>
-                        <img className="falconheavy-image" alt="falcon1" src={falconheavy}></img>
-                    </div>
-                </div>
-                <div className="col-3 vehicle">
-                    <div className="btn-vehicle" onClick={() => openModal("5e9d0d96eda699382d09d1ee", starship)}>
-                        <h3>Starship</h3>
-                        <img className="starship-image" alt="falcon1" src={starship}></img>
-                    </div>
-                </div> */}
-          
+                <Slider />          
             
             <Modal isOpen={modalIsOpen} style={customStyles} onRequestClose={() => setModalIsOpen(false)}>
                         <button className="modal-close" onClick={setModalIsOpenToFalse}>
@@ -156,6 +141,5 @@ export default function Carousel() {
                         <ModalContent rocketImage={rocketImage} rocketName={rocketName} rocketStatus={rocketStatus} rocketDesc={rocketDesc} engineStages={engineStages} engineType={engineType} engineThrust={engineThrust}/>
             </Modal>
         </div>
-        
     )
 }
