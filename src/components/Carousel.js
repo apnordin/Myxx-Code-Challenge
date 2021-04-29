@@ -89,23 +89,34 @@ export default function Carousel() {
     //     </div>
     //   );
 
+    const carouselItems = [
+        { name: "Falcon 1", shortname: "falcon1", imgclass: "falcon1-image", imgURL: {falcon1}, idKey: "5e9d0d95eda69955f709d1eb" },
+        { name: "Falcon 9", shortname: "falcon9", imgclass: "falcon9-image", imgURL: {falcon9}, idKey: "5e9d0d95eda69973a809d1ec" },
+        { name: "Falcon Heavy", shortname: "falconheavy", imgclass: "falconheavy-image", imgURL: {falconheavy}, idKey: "5e9d0d95eda69974db09d1ed" },
+        { name: "Starship", shortname: "starship", imgclass: "starship-image", imgURL: {starship}, idKey: "5e9d0d96eda699382d09d1ee" },
+    ]
+
     const Slider = () => {
         
         return (
-            <div>This be da slider yeee
-                {/* <Arrow
-                    direction="left"
-                    clickFunction={ } />
-
-                <ImageSlide url={ currentImageIndex } />
-
-                <Arrow
-                    direction="right"
-                    clickFunction={  } /> */}
-
+            <div>
+                 { carouselItems.map(function(carouselItem) {
+                    const shortName = carouselItem.shortname;
+                    const imageURL = carouselItem.imgURL[shortName];
+                     return (
+                         <div className="col-3 vehicle" key={carouselItem.shortname}>
+                            <div className="btn-vehicle" onClick={() => openModal(carouselItem.idKey, imageURL)}>
+                                <h3>{carouselItem.name}</h3>
+                                <img className={carouselItem.imgclass} alt={carouselItem.imgURL[shortName]} src={carouselItem.imgURL[shortName]}></img>
+                            </div>
+                         </div>
+                     )
+                 })}
             </div>
         )
     }
+
+  
 
     return(
         <div className="col-12 text-center">
