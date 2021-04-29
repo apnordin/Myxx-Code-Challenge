@@ -12,7 +12,7 @@ body,
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 }
 
 .allpage {
@@ -220,60 +220,69 @@ body,
 
 @media only screen and (max-width: 768px) {
   .subtitle {
-    margin-top: -10px;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 20px 15px 0px;
+    margin-top: -15px;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 18px 0px 0px;
   }
   .navbar {
     padding: 0px 0px 0px;
     height: 13%;
+    min-height: 60px;
   }
   .title-text {
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: -10px;
   }
   .linebreak {
-    height: 5px;
-    width: 220px;
+    height: 3px;
+    width: 120px;
     border-radius: 5px;
     display: inline-block;
     background-color: rgb(177, 197, 250);
   }
   .btn-vehicle {
+    padding-top: 50%;
+    transform: translateY(-30%);
+    position: relative;
     width: 80%;
   }
   .btn-vehicle:hover {
     cursor: pointer;
-    transform: scale(1);
+    transform: translateY(-30%);
   }
 
   .btn-vehicle:active {
     cursor: pointer;
-    transform: scale(1);
+    transform: translateY(-30%);
   }
 }
 
 .slider {
   height: 92%;
-  max-height: 488px;
+  max-height: 400px;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
 .falcon1-image-c {
   max-width: 17%;
+  max-height: 350px;
 }
 
 .falcon9-image-c {
   max-width: 22%;
+  max-height: 350px;
 }
 
 .falconheavy-image-c {
   max-width: 24%;
+  max-height: 350px;
 }
 
 .starship-image-c {
   max-width: 37%;
+  max-height: 350px;
 }
 
 .prevBtn {
@@ -291,7 +300,7 @@ body,
 }
 
 .slider-btn-text {
-  line-height: 488px;
+  line-height: 400px;
 }
 
 .slider-btn {
