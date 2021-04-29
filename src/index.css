@@ -12,7 +12,7 @@ body,
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 .allpage {
@@ -218,7 +218,7 @@ body,
   width: 50%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .subtitle {
     margin-top: -15px;
     font-size: 15px;
@@ -267,22 +267,22 @@ body,
 
 .falcon1-image-c {
   max-width: 17%;
-  max-height: 350px;
+  max-height: 300px;
 }
 
 .falcon9-image-c {
   max-width: 22%;
-  max-height: 350px;
+  max-height: 300px;
 }
 
 .falconheavy-image-c {
   max-width: 24%;
-  max-height: 350px;
+  max-height: 300px;
 }
 
 .starship-image-c {
   max-width: 37%;
-  max-height: 350px;
+  max-height: 300px;
 }
 
 .prevBtn {
