@@ -4,7 +4,7 @@ import falcon9 from "../assets/falcon9.png";
 import falconheavy from "../assets/falcon_heavy.png";
 import starship from "../assets/starship.png";
 import Modal from "react-modal";
-import ModalContent from "./ModalContent";
+import MobileModalContent from "./MobileModalContent";
 import backgroundImage from "../assets/background_web.png";
 import axios from "axios";
 
@@ -133,7 +133,7 @@ export default function Carousel() {
             <Modal isOpen={modalIsOpen} style={customStyles} onRequestClose={() => setModalIsOpen(false)}>
                         <button className="modal-close" onClick={setModalIsOpenToFalse}>
                             <span>X</span></button>
-                        <ModalContent rocketImage={rocketImage} rocketName={rocketName} rocketStatus={rocketStatus} rocketDesc={rocketDesc} engineStages={engineStages} engineType={engineType} engineThrust={engineThrust}/>
+                        <MobileModalContent rocketImage={rocketImage} rocketName={rocketName} rocketStatus={rocketStatus} rocketDesc={rocketDesc} engineStages={engineStages} engineType={engineType} engineThrust={engineThrust}/>
             </Modal>
         </div>
     )
