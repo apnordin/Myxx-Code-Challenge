@@ -19,7 +19,7 @@ export default function MobileModalContent ( {rocketImage, rocketName, rocketSta
         <div className="container">
             <div className="row mt-3">
                 <div className="col-12 mt-3 modaltext">
-                    <h1 className="rocket-name">{rocketName}</h1>
+                    <h1 className="rocket-name mb-0">{rocketName}</h1>
                     <div className="linebreak"></div>
                     <Status />
                     <div className="rocket-description my-4">{rocketDesc}
