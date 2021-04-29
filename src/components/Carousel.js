@@ -38,7 +38,6 @@ export default function Carousel() {
             url: queryURL
         })
         .then(function(response) {
-            console.log(response.data);
             setRocketImage(imgsource)
             setRocketName(response.data.name);
             setRocketStatus(response.data.active);
@@ -73,7 +72,6 @@ export default function Carousel() {
     const nextBtn = (current) => {
         if (current < 3) {
             setCurrentRocketIndex(current + 1)
-            console.log(current)
         } else if (current === 3) {
             setCurrentRocketIndex(0)
         }
@@ -97,15 +95,12 @@ export default function Carousel() {
 
     const Slider = () => {
 
-        console.log(carouselItems[currentRocketIndex]);
-
         const item = carouselItems[currentRocketIndex];
         const shortName = carouselItems[currentRocketIndex].shortname;
         const imageURL = carouselItems[currentRocketIndex].imgURL[shortName]
 
         return (
             <div className="slider">
-                <div className="col-12">
 
                     <div className="prevBtn slider-btn" onClick={() => prevBtn(currentRocketIndex)}>
                         <div className="slider-btn-text">
@@ -123,7 +118,7 @@ export default function Carousel() {
                             <img className={item.imgclass} alt={imageURL} src={imageURL}></img>
                         </div>
                     </div>
-                </div>
+                
             </div>
         )
     }

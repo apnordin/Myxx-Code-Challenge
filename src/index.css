@@ -258,34 +258,42 @@ body,
   .btn-vehicle {
     width: 80%;
   }
+  .btn-vehicle:hover {
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+  .btn-vehicle:active {
+    cursor: pointer;
+    transform: scale(1);
+  }
 }
 
 .slider {
   height: 92%;
   max-height: 488px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .falcon1-image-c {
-  max-width: 15%;
+  max-width: 17%;
 }
 
 .falcon9-image-c {
-  max-width: 30%;
+  max-width: 22%;
 }
 
 .falconheavy-image-c {
-  max-width: 33%;
+  max-width: 24%;
 }
 
 .starship-image-c {
-  max-width: 57%;
+  max-width: 37%;
 }
 
 .prevBtn {
   position: relative;
   float: left;
-  margin-left: -4.7%;
   width: 35px;
   height: 100%;
 }
@@ -293,7 +301,6 @@ body,
 .nextBtn {
   position: relative;
   float: right;
-  margin-right: -4.7%;
   width: 35px;
   height: 100%;
 }
@@ -303,7 +310,7 @@ body,
 }
 
 .slider-btn {
-  background-color: rgba(255, 255, 255, 0.212);
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
 .slider-btn:hover {
