@@ -184,34 +184,7 @@ body,
   }
 }
 
-@media only screen and (max-width: 991px) {
-  .subtitle {
-    margin-top: -10px;
-    font-size: 20px;
-    line-height: 28px;
-    padding: 20px 20px 0px;
-  }
-  .vehicle {
-    height: 330px;
-  }
-}
-
-@media only screen and (max-width: 768px) and (min-height: 1000px) {
-  .subtitle {
-    margin-top: -10px;
-    font-size: 20px;
-    line-height: 28px;
-    padding: 20px 75px 0px;
-  }
-  .vehicle {
-    height: 400px;
-  }
-  .navbar {
-    height: 18%;
-  }
-}
-
-@media only screen and (max-width: 1024px) and (min-height: 1100px) {
+@media only screen and (max-width: 1024px) {
   .subtitle {
     margin-top: -10px;
     font-size: 20px;
@@ -226,6 +199,18 @@ body,
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .subtitle {
+    margin-top: -10px;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 20px 20px 0px;
+  }
+  .vehicle {
+    height: 330px;
+  }
+}
+
 .img-center {
   display: block;
   margin-left: auto;
@@ -233,7 +218,7 @@ body,
   width: 50%;
 }
 
-@media only screen and (max-width: 762px) and (min-height: 800px) {
+@media only screen and (max-width: 768px) {
   .subtitle {
     margin-top: -10px;
     font-size: 16px;
